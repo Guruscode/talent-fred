@@ -1,3 +1,4 @@
+// app/schools/growth-marketing/page.tsx
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SchoolHero } from "@/components/school-hero"
@@ -7,10 +8,9 @@ import { ProjectsSection } from "@/components/projects-section"
 import { OutcomesSection } from "@/components/outcomes-section"
 import { CurriculumSection } from "@/components/curriculum-section"
 import { InstructorsSection } from "@/components/instructors-section"
-import { PricingSection } from "@/components/pricing-section"
 import { FAQSection } from "@/components/faq-section"
 
-const growthMarketingData = {
+export const growthMarketingData = {
   title: "School of Growth and Marketing",
   tagline: "Create, Design & Market Brands in a Digital World",
   description:
@@ -21,24 +21,152 @@ const growthMarketingData = {
       description: "Make videos, blogs, and social content that stand out",
       tools: ["Video editing", "Podcasting", "Blogging", "Short-form storytelling"],
       projects: ["Build a YouTube channel", "launch a podcast", "grow your personal brand"],
+      trackDetails: {
+        objectives: [
+          "Create engaging content",
+          "Master storytelling techniques",
+          "Build an audience",
+        ],
+        learningOutcomes: [
+          "Edit videos and podcasts",
+          "Write compelling blogs",
+          "Optimize for social platforms",
+        ],
+        tools: ["Adobe Premiere", "Audacity", "WordPress", "Canva"],
+        curriculumOverview: [
+          { week: 1, topic: "Content Fundamentals" },
+          { week: 2, topic: "Video & Podcasting" },
+          { week: 3, topic: "Blogging & Storytelling" },
+          { week: 4, topic: "Audience Building & Capstone" },
+        ],
+        capstoneProject: {
+          title: "Personal Brand Launch",
+          description: "Create and launch a YouTube channel or podcast series.",
+        },
+        pricing: {
+          standard: "$1,000",
+          discounted: "$799",
+          duration: "4 weeks",
+        },
+        faculty: [
+          { name: "Grace Lee", role: "Content Creator", bio: "YouTuber with 1M subscribers." },
+          { name: "Henry Patel", role: "Podcasting Expert", bio: "Host of top podcast." },
+        ],
+      },
     },
     {
       title: "Digital Marketing",
       description: "Reach the right audience and drive action",
       tools: ["Social media strategy", "SEO", "Media Buying (Meta, TikTok, Google)", "Email automation"],
       projects: ["Run campaigns", "grow product sales", "track and optimize conversions"],
+      trackDetails: {
+        objectives: [
+          "Develop marketing strategies",
+          "Optimize for SEO",
+          "Run ad campaigns",
+        ],
+        learningOutcomes: [
+          "Use Google Ads and Meta Ads",
+          "Implement email marketing",
+          "Analyze campaign performance",
+        ],
+        tools: ["Google Analytics", "Meta Ads Manager", "Mailchimp", "SEMrush"],
+        curriculumOverview: [
+          { week: 1, topic: "Digital Marketing Basics" },
+          { week: 2, topic: "SEO & Social Strategy" },
+          { week: 3, topic: "Media Buying" },
+          { week: 4, topic: "Optimization & Capstone" },
+        ],
+        capstoneProject: {
+          title: "Digital Campaign",
+          description: "Run a full digital marketing campaign for a product.",
+        },
+        pricing: {
+          standard: "$1,200",
+          discounted: "$999",
+          duration: "4 weeks",
+        },
+        faculty: [
+          { name: "Ivy Chen", role: "Digital Marketer", bio: "SEO specialist at HubSpot." },
+          { name: "Jack Wilson", role: "Ads Expert", bio: "Media buyer for e-commerce." },
+        ],
+      },
     },
     {
       title: "Growth Marketing",
       description: "Use experiments and insights to grow fast",
       tools: ["Funnel design", "A/B testing", "Retention strategies"],
       projects: ["Landing pages", "growth experiments", "customer retention plans"],
+      trackDetails: {
+        objectives: [
+          "Design growth funnels",
+          "Conduct A/B tests",
+          "Implement retention tactics",
+        ],
+        learningOutcomes: [
+          "Analyze user behavior",
+          "Optimize conversion rates",
+          "Scale growth strategies",
+        ],
+        tools: ["Optimizely", "Google Optimize", "Mixpanel", "Amplitude"],
+        curriculumOverview: [
+          { week: 1, topic: "Growth Fundamentals" },
+          { week: 2, topic: "Funnel Design" },
+          { week: 3, topic: "A/B Testing" },
+          { week: 4, topic: "Retention & Capstone" },
+        ],
+        capstoneProject: {
+          title: "Growth Experiment Plan",
+          description: "Design and execute growth experiments for a startup.",
+        },
+        pricing: {
+          standard: "$1,300",
+          discounted: "$1,099",
+          duration: "4 weeks",
+        },
+        faculty: [
+          { name: "Katie Moore", role: "Growth Lead", bio: "Growth hacker at Airbnb." },
+          { name: "Liam Scott", role: "Testing Expert", bio: "A/B testing consultant." },
+        ],
+      },
     },
     {
       title: "Product Marketing",
       description: "Position and launch products that customers love",
       tools: ["Market research", "Positioning", "Go-to-market strategy", "Customer insights"],
       projects: ["Product launches", "market analysis", "competitive positioning"],
+      trackDetails: {
+        objectives: [
+          "Conduct market research",
+          "Develop positioning strategies",
+          "Plan go-to-market",
+        ],
+        learningOutcomes: [
+          "Analyze competitors",
+          "Create launch plans",
+          "Gather customer insights",
+        ],
+        tools: ["SurveyMonkey", "Typeform", "Ahrefs", "ProductBoard"],
+        curriculumOverview: [
+          { week: 1, topic: "Product Marketing Basics" },
+          { week: 2, topic: "Market Research" },
+          { week: 3, topic: "Positioning & Strategy" },
+          { week: 4, topic: "Launches & Capstone" },
+        ],
+        capstoneProject: {
+          title: "Product Launch Strategy",
+          description: "Develop a go-to-market plan for a new product.",
+        },
+        pricing: {
+          standard: "$1,100",
+          discounted: "$899",
+          duration: "4 weeks",
+        },
+        faculty: [
+          { name: "Mia Rodriguez", role: "Product Marketer", bio: "PMM at Salesforce." },
+          { name: "Noah Garcia", role: "Research Specialist", bio: "Market analyst." },
+        ],
+      },
     },
   ],
   outcomes: [
@@ -86,13 +214,12 @@ export default function GrowthMarketingPage() {
           tagline={growthMarketingData.tagline}
           description={growthMarketingData.description}
         />
-        <TracksOverview tracks={growthMarketingData.tracks} />
+        <TracksOverview tracks={growthMarketingData.tracks} school="growth-marketing" />
         <ToolsSection tracks={growthMarketingData.tracks} />
         <ProjectsSection tracks={growthMarketingData.tracks} />
         <OutcomesSection outcomes={growthMarketingData.outcomes} />
         <CurriculumSection />
         <InstructorsSection />
-        <PricingSection />
         <FAQSection faqs={growthMarketingData.faqs} />
       </main>
       <Footer />
